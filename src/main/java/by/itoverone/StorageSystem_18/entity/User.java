@@ -6,23 +6,23 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "item")
+@Table(name = "user")
 @Data
 @NoArgsConstructor
-public class Item {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer itemId;
+    private Integer userId;
 
     @Column
-    private String itemName;
+    private String userName;
 
     @Column
-    private Integer itemEAN;
+    private String userEmail;
 
     @Column
-    private Integer itemQuality;
+    private String userPass;
 
     @Column
-    private Double itemPrice;
+    private Integer access;
 }

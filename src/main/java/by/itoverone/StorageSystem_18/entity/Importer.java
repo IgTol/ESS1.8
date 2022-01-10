@@ -6,23 +6,17 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "item")
+@Table(name = "importer")
 @Data
 @NoArgsConstructor
-public class Item {
+public class Importer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer itemId;
+    private Integer importerId;
 
     @Column
-    private String itemName;
+    private String importerName;
 
     @Column
-    private Integer itemEAN;
-
-    @Column
-    private Integer itemQuality;
-
-    @Column
-    private Double itemPrice;
+    private Integer importerUnp;
 }
